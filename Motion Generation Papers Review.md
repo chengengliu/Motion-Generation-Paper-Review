@@ -50,8 +50,8 @@ Language2Pose: Natural language grounded pose forecasting*
 代表工作：
 *Text2Action: Generative adversarial synthesis from language to action
 Dancing to music
-Learning to generate diverse dance motions with transformer
-*
+Learning to generate diverse dance motions with transformer*
+
 #### Text-conditioned motion generation
 
 提到了两类的做法。一类是把text-motion做成一个seq2seq的machnie translation 任务（代表作text2action），另一个是跨模态的编码，将文字和动作编码到同一空间（代表作Language2Pose）*详细的代表作名单可以参见论文原文，不做赘述*。
