@@ -1,5 +1,6 @@
 2022/10/27
 
+**Before reading**:\
 *This file focuses on intro, overview and related work of each selected paper on the topic of motion generation. Experiments/methods/novelty will not be examined in this note. I tried to extract the authors' opinions towards other works and their thoughts on their works. Most words quoted are from the paper itself. The comment in Chinese is based on my own understanding regarding the work, and may not be neutral/correct.*  
 
 
