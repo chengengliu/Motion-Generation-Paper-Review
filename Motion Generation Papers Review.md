@@ -7,7 +7,7 @@
 
 ### Summary
 Train an encoder to find the proper embedding of an input sequence in CLIP space, and a decoder that generates the most fitting motion to a given CLIP space latent code.
-![[MotionCLIP.png]]
+![MotionCLIP.png](pics/MotionCLIP.png)
 ### Related Work
 #### Guided Human Motion Generation
 **1.1** Condition on another domain: ACTOR, Action2Motion. 
@@ -28,7 +28,7 @@ Sign Language Production (SLP), as an essential task for the Deaf community, aim
 *Generating animated videos of human activities from natural language descriptions*, *Natural language grounded pose forecasting, Synthesis of compositional animations from textual descriptions*, 以上三篇被批评为：Generate only one output motion per text input, 
 
 批评了RNN：On human motion prediction using recurrent neural networks，这个我觉得蛮无厘头的，找了一个2017年的RNN去作对比，现在谁不用全局信息？更多的是为了体现自己使用了Transformer做出的对比把。
-![[TEMOS.png]]
+![TEMOS.png](pics/TEMOS.png)
 
 ### Summary
 "We present Text-toMotions (TEMOS), a novel cross-modal variational model that can produce diverse 3D human movements given textual descriptions in natural language. (ii) In our experiments, we provide an extensive ablation study of the model components and outperform the state of the art by a large margin both on standard metrics and through perceptual studies. (iii) We go beyond stick figure generations, and exploit the SMPL model for text-conditioned body surface synthesis, demonstrating qualitatively appealing results."
@@ -70,7 +70,7 @@ Paired recurrent autoencoders for bidirectional translation between robot action
 为什么动作生成是一个挑战性的任务：可能的动作的丰富性，人类对其敏感的感知（这个没懂）以及如何准确描述动作。
 稍微点评curent work：low-quality的生成或者表达能力有限。
 然后本文是一个classifier-free diffusion-based generative model。本工作基于transformer，并且没有使用DDPM里的noise而是prediction of the sample（这里感觉开始有意思了）声称本工作是轻量模型（在实验部分提到了他们只用了单卡训练）且达到了SOTA效果（详情见文章实验对比）。
-![[HumanMotionDiffusionModel.png]]
+![HumanMotionDiffusionModel.png](pics/HumanMotionDiffusionModel.png)
 ### Summary
 提到了一个关于数据label的问题。动作“踢”，可以使soccer kick，也可以是Karate kick。指定动作kick，有很多种方法去描述他，所以成为了一个many to many的问题。提到了三篇工作以及他们的不足（都是使用了自编码器或者变分自编码器）：
 *TEMOS: Generating diverse human motions from textual descriptions（就是上边这一篇）Motionclip: Exposing human motion generation to clip space
@@ -103,7 +103,7 @@ TEMOS: Generating diverse human motions from textual descriptions（又是你）
 文章的创新点：
 ”We propose FLAME, a unified model for motion synthesis and editing with free-form language description. • Our model is the first attempt applying diffusion models to motion data; to handle the temporal nature of motion and variable-length, we devise a new architecture. • We show FLAME can generate more diverse motions corresponding to the same text. • We demonstrate FLAME can solve other classical tasks—prediction and in-betweening—through editing, without any fine-tuning.“
 （额，有点不懂的是居然在Intro里提到了他们的输入是什么）
-![[FLAME.png]]
+![FLAME.png](pics/FLAME.png)
 ### Summary
 一个Diffusion-based motion synthesis and editing model(上面那个也能editing我没提到)。结构里也用到了transformer，因为motion是variable-length的数据。
 总的来说，本工作提出了一个transformer decoder-based architecture, which takes diffusion time-step token(as well as language token, motion token and motion lengths)
@@ -136,7 +136,7 @@ TEMOS: Generating diverse human motions from textual descriptions*
 提出当前的text-motion generation 工作存在的问题：diverse and fine-grained motion generation with various text inputs. 声称他们的工作是第一个diffusion based text-driven motion generation framework. 
 本工作主要贡献：
 “Probabilistic Mapping. Instead of a deterministic language-motion mapping, MotionDiffuse generates motions through a series of denoising steps in which variations are injected. 2) Realistic Synthesis. MotionDiffuse excels at modeling complicated data distribution and generating vivid motion sequences. 3) Multi-Level Manipulation. MotionDiffuse responds to fine-grained instructions on body parts, and arbitrary-length motion synthesis with time-varied text prompts.”
-![[MotionDiffuse.png]]
+![MotionDiffuse.png](pics/MotionDiffuse.png)
 ### Summary
 有几类condition signals，包括pre-defined motion categories( *Action2Motion,
 Actionconditioned 3d human motion synthesis with transformer vae,
