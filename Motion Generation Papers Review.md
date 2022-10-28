@@ -162,4 +162,5 @@ Implicit neural representations for variable length human motion generation* ), 
 作者认为 *Action-Conditioned 3D Human Motion synthesis with Transformer VAE， Action2Motion，Implicit neural representations for variable length human motion generation 等工作*   aim at synthesizing motion sequences of several specific categories。顺便还写了对Action2Motion，ACTOR的点评。
 之后提到了music to dance（不是本文关注的重点了），不过也提到了三篇文章，大部分的思路是将music feature 和motion feature1 map到同一个joint space。只有一个工作是使用了two-stage dance generator。
 在music-drive generation之后，作者提到了text-driven motion generation。 作者认为text-driven可以当做是"learning a joint embedding of text feature space and motion feature space". 当然，text和music肯定还有很大不同的，作者提到了两点不同：1. 文字驱动的模型与人体相关性更强 2. 文字驱动的模型包括了更广泛的动作。
-作者认为：*Synthesis of compositional animations from textual descriptions 和 MotionCLIP*等工作还是以deterministic 模型为基础，因此他们只能生成一种动作，根据文字。TEMOS使用了VAE，可以生成不同的动作序列。但是这种动作序列是通过获取一个动作与语言的联合编码空间获得的，
+作者认为：*Synthesis of compositional animations from textual descriptions 和 MotionCLIP*等工作还是以deterministic 模型为基础，因此他们只能生成一种动作，根据文字。TEMOS使用了VAE，可以生成不同的动作序列。但是这种动作序列是通过获取一个动作与语言的联合编码空间获得的，作者认为这种设计压缩了从文字中获得的信息，从而无法从一个很具体的文字描述中生成正确的动作序列。
+*Generating diverse and natural 3d human motions from text* 作者提到这个工作，认为他们通过使用自编码器的结构，成为了首个编码文字信息，然后使用自回归模型生成动作序列，在文字特征约束下。但是这种方法的问题是，使用了自回归模型很难抓住全局信息，并且生成的质量不够高。
